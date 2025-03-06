@@ -16,8 +16,8 @@ import java.util.Map;
 public class ExcelCode {
 
     public static ArrayList<Map<String, String>> leerDatosDeHojaDeExcel(String rutaDeExcel, String hojaDeExcel) throws IOException {
-        ArrayList<Map<String, String>> arrayListDatoPlanTrabajo = new ArrayList();
-        Map<String, String> informacionProyecto = new HashMap();
+        ArrayList<Map<String, String>> arrayListDatoPlanTrabajo = new ArrayList<>();
+        Map<String, String> informacionProyecto = new HashMap<>();
         File file = new File(rutaDeExcel);
         FileInputStream inputStream = new FileInputStream(file);
         XSSFWorkbook newWorkbook = new XSSFWorkbook(inputStream);
@@ -44,7 +44,7 @@ public class ExcelCode {
                 }
             }
             arrayListDatoPlanTrabajo.add(informacionProyecto);
-            informacionProyecto = new HashMap();
+            informacionProyecto = new HashMap<>();
         }
         return arrayListDatoPlanTrabajo;
     }

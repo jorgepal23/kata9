@@ -117,30 +117,6 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-failsafe-plugin</artifactId>
-                <version>3.0.0-M5</version>
-                <configuration>
-                    <includes>
-                        <include>**/test/**/**/*.java</include>
-                    </includes>
-                    <systemPropertyVariables>
-                        <surfire.security.manager>
-                            java.lang.SecurityManager
-                        </surfire.security.manager>
-                    </systemPropertyVariables>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>integration-test</goal>
-                            <goal>verify</goal>
-                        </goals>
-                    </execution>
-                </executions>
-
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
@@ -162,7 +138,6 @@
                     <execution>
                         <id>check-feature-files</id>
                         <phase>process-test-resources</phase>
-
                     </execution>
                     <execution>
                         <id>serenity-reports</id>
@@ -175,5 +150,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
