@@ -22,7 +22,7 @@ jobs:
           java-version: '21'
 
       - name: Install dependencies for automation project
-        run: mvn clean install -DskipTests
+        run: mvn clean install
 
       - name: Run test cases for automation kata project
         run: mvn test -P run-testing
