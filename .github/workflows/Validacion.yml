@@ -1,0 +1,35 @@
+name: Kata
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  integration-kata-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout automation project
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'adopt'
+          java-version: '21'
+
+      - name: Install dependencies for automation project
+        run: mvn clean install -DskipTests
+
+      - name: Run test cases for automation kata project
+        run: mvn test -P run-testing
+
+      - name: Upload test report artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-report
+          path: AutomationReport.html
