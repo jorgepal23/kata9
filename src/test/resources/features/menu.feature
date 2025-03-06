@@ -1,3 +1,4 @@
+@Menu
 Feature: Menu for users on the page
 
   Background:

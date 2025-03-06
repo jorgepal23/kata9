@@ -1,3 +1,4 @@
+@test
 Feature: User login
 
   Scenario: Enter login wrong
