@@ -1,0 +1,30 @@
+name: Revision post
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: maven
+    - name: instalar dependeincias con maven
+      run: mvn clean install -DskipTests
+    - name: compilar codigo java
+      run: mvn compile
+
+    - name: ejecutar pruebas
+      run: |
+        mvn test -Dtest=net.orangehrmlive.Runners.LogRunner || true
+        mvn test -Dtest=net.orangehrmlive.Runners.MenuRunner || true
