@@ -1,4 +1,4 @@
-package net.orangehrmlive.StepDefinitions;
+package net.orangehrmlive.stepdefinitions;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
