@@ -25,7 +25,7 @@ jobs:
         run: mvn clean install
 
       - name: Run test cases for automation kata project
-        run: mvn test -P integration-test
+        run: mvn test -P run-testing
 
       - name: Upload test report artifact
         if: always()
