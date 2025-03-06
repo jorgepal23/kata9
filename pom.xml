@@ -97,9 +97,6 @@
         </dependency>
     </dependencies>
 
-    <profiles>
-    <profile>
-    <id>run-testing</id>
     <build>
         <testResources>
             <testResource>
@@ -114,7 +111,7 @@
                 <version>3.2.5</version>
                 <configuration>
                     <includes>
-                        <include>**/Runner.java</include>
+                        <include>**/*Runner.java</include>
                     </includes>
                 </configuration>
             </plugin>
@@ -178,7 +175,5 @@
             </plugin>
         </plugins>
     </build>
-    </profile>
-    </profiles>
 
 </project>

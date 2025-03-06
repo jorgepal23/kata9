@@ -19,11 +19,8 @@ jobs:
         java-version: '21'
         distribution: 'temurin'
         cache: maven
-    - name: instalar dependeincias con maven
-      run: mvn clean install
-    - name: compilar codigo java
-      run: mvn compile
+    - name: instalar dependencias con maven
+      run: mvn install -DskipTests=true
 
     - name: ejecutar pruebas
-      run: |
-        mvn clean test
+      run: mvn clean test
