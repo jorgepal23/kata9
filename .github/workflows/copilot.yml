@@ -19,7 +19,7 @@ jobs:
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
-          java-version: '17'
+          java-version: '21'
           distribution: 'temurin'
           cache: maven
 
@@ -28,9 +28,9 @@ jobs:
         with:
           path: |
             ~/.m2/repository
-          key: ${{ Runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          key: ${{ Runner.java }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
-            ${{ Runner.os }}-maven-
+            ${{ Runner.java }}-maven-
 
       - name: Run tests
         run: mvn test
