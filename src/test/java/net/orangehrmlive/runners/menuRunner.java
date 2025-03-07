@@ -6,9 +6,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = "src/test/resources/features/login.feature",
+        features = "src/test/resources/features/menu.feature",
         glue = "net.orangehrmlive.stepdefinitions",
         snippets = CucumberOptions.SnippetType.CAMELCASE
 )
-public class LogRunner {
+public class menuRunner {
 }
