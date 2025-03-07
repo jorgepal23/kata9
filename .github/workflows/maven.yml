@@ -27,3 +27,6 @@ jobs:
 
     - name: ejecutar pruebas
       run: mvn test -Dtest=net.orangehrmlive.runners.LogRunner
+
+    - name: ejecutar pruebas
+      run: mvn clean compile -Xlint:unchecked
