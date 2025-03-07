@@ -26,4 +26,4 @@ jobs:
       run: mvn clean test
 
     - name: ejecutar pruebas
-      run: mvn clean verify -Dtest="net.orangehrmlive.runners.LogRunner"=true
+      run: mvn test -Dtest=net.orangehrmlive.runners.LogRunner=true
