@@ -26,7 +26,7 @@ jobs:
       run: mvn clean test
 
     - name: ejecutar pruebas
-      run: mvn test -Dtest=net.orangehrmlive.runners.logRunner || true
+      run: mvn test -Dtest=logRunner
 
     - name: ejecutar pruebas 2
-      run: mvn test -Dtest=net.orangehrmlive.runners.menuRunner || true
+      run: mvn test -Dtest=menuRunner
