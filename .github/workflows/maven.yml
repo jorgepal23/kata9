@@ -24,3 +24,6 @@ jobs:
 
     - name: ejecutar pruebas
       run: mvn clean test
+
+    - name: ejecutar pruebas
+      run: mvn clean verify -Dtest="**/*Runner.java"
