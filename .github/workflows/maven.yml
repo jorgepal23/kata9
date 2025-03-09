@@ -25,8 +25,8 @@ jobs:
     - name: ejecutar pruebas
       run: mvn clean test
 
-    - name: ejecutar pruebas
-      run: mvn test -Dtest=logRunner
+    - name: ejecutar pruebas 1
+      run: mvn test -Dtest=logRunner test
 
     - name: ejecutar pruebas 2
-      run: mvn test -Dtest=menuRunner
+      run: mvn test -Dtest=menuRunner test

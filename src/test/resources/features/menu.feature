@@ -1,4 +1,4 @@
-@Menu
+@Test
 Feature: Menu for users on the page
 
   Background:
