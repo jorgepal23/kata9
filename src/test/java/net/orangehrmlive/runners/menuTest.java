@@ -2,7 +2,6 @@ package net.orangehrmlive.runners;
 
 import io.cucumber.junit.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
-import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
