@@ -109,7 +109,7 @@
                 <version>3.2.5</version>
                 <configuration>
                     <includes>
-                        <include>**/*logRunner*.java</include>
+                        <include>**/*Runner*.java</include>
                     </includes>
                 </configuration>
             </plugin>
@@ -118,9 +118,6 @@
                 <artifactId>maven-failsafe-plugin</artifactId>
                 <version>3.0.0-M5</version>
                 <configuration>
-                    <includes>
-                        <include>**/test/**/**/*.java</include>
-                    </includes>
                     <systemPropertyVariables>
                         <surfire.security.manager>
                             java.lang.SecurityManager
