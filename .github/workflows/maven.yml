@@ -20,7 +20,10 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: instalar dependencias con maven
-      run: mvn install -DskipTests=true
+      run: mvn install
+
+    - name: ejecutar pruebas 3
+      run: mvn clean verify
 
     - name: ejecutar pruebas
       run: mvn clean test
