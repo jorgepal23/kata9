@@ -20,8 +20,11 @@ jobs:
         distribution: 'adopt'
         cache: maven
 
-    - name: Limpiar directorios de Serenity
-      run: rm -rf target/site/serenity || true
+    - name: Limpiar archivos de ejecución anteriores
+      run: mvn clean
+
+    - name: Ejecutar pruebas con Serenity
+      run: mvn verify
 
     - name: instalar dependencias con maven
       run: mvn install
