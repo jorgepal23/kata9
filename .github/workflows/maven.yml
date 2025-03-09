@@ -20,13 +20,13 @@ jobs:
         distribution: 'adopt'
         cache: maven
     - name: instalar dependencias con maven
-      run: mvn install -DskipTests
+      run: mvn install
 
     - name: ejecutar pruebas
       run: mvn clean test
 
-    - name: ejecutar pruebas 2
-      run: mvn clean verify -Dtags=@Test
+    - name: Generar reporte de JUnit
+      run: mvn site
 
     - name: Generar reportes de Serenity
       run: mvn serenity:aggregate
