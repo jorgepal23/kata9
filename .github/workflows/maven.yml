@@ -26,9 +26,6 @@ jobs:
       run: mvn clean test
 
     - name: ejecutar pruebas 2
-      run: mvn -Dtest=menuTest test
-
-    - name: ejecutar pruebas 2
       run: mvn clean verify -Dtags=@Test
 
     - name: Generar reportes de Serenity
