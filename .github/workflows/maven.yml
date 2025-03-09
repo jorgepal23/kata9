@@ -30,3 +30,6 @@ jobs:
 
     - name: ejecutar pruebas 2
       run: mvn -Dtest=menuTest test
+
+    - name: Generar reportes de Serenity
+      run: mvn serenity:aggregate
