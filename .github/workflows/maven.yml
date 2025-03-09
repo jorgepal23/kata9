@@ -17,19 +17,16 @@ jobs:
       uses: actions/setup-java@v4
       with:
         java-version: '17'
-        distribution: 'temurin'
+        distribution: 'adopt'
         cache: maven
     - name: instalar dependencias con maven
-      run: mvn install
-
-    - name: ejecutar pruebas 3
-      run: mvn clean verify
+      run: mvn install -DskipTests
 
     - name: ejecutar pruebas
       run: mvn clean test
 
     - name: ejecutar pruebas 1
-      run: mvn -Dtest=*Runner test
+      run: mvn -Dtest=*Test test
 
     - name: ejecutar pruebas 2
-      run: mvn -Dtest=menuRunner test
+      run: mvn -Dtest=menuTest test
